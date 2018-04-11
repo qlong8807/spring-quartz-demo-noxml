@@ -1,0 +1,8 @@
+可直接运行Junit查询定时任务的运行效果。
+
+如果没用SpringBoot。而是用了传统的SpringMVC只需要在配置文件中添加
+<bean id="jobFactory" class="com.java.zz.task.MyJobFactory"></bean>
+    <!-- 调度工厂 -->
+<bean id="scheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+    <property name="jobFactory" ref="jobFactory">
+</property>
